@@ -1,0 +1,5 @@
+@import "tailwindcss" layer(base);
+@import "tailwindcss" layer(components);
+@import "tailwindcss" layer(utilities);
+
+@import "tailwindcss";

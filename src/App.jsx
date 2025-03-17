@@ -1,35 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useEffect, useState } from 'react';
+import { getCurrentWeather, getForecast } from './Services/api';
+import SideBar from './Components/SideBar/SideBar';
+import WeeklyForecast from './Components/WeeklyForecast/WeeklyForecast';
+import WeatherInfo from './Components/WeatherInfo/WeatherInfo';
 
 function App() {
-  const [count, setCount] = useState(0)
+    return (
+        <div className="grid grid-cols-[7rem,1fr,15rem] h-screen">
+            {/* SideBar izquierda */}
+            <SideBar />
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p className='bg-[#86efac] text-[#166534] p-4 text-center font-bold'>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+            {/* Contenido principal */}
+            <main className="col-start-2 col-end-3 p-4 overflow-y-auto">
+                <WeatherInfo />
+            </main>
+
+            {/* SideBar derecha */}
+            <WeeklyForecast location="São Paulo" />
+        </div>
+    );
 }
 
-export default App
+export default App;

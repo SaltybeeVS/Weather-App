@@ -1,0 +1,26 @@
+.weather-info {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.city-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.rain-chance {
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.temperature {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff6f61;
+    margin-top: 20px;
+}

@@ -36,14 +36,18 @@ function WeatherInfo() {
 
     return (
         <div className="weather-info">
-            {/* Nombre de la ciudad */}
-            <h1 className="city-name">{weatherData.location.name}</h1>
+            {/* Contenedor para nombre y temperatura */}
+            <div className="header-row">
+                <h2 className="city-name">{weatherData.location.name}</h2>
+                <p className="temperature">{weatherData.current.temp_c}°C</p>
+            </div>
+            
             {/* Posibilidad de lluvia */}
-            <p className="rain-chance">
-                Posibilidad de lluvia: {weatherData.forecast.forecastday[0].day.daily_chance_of_rain}%
-            </p>
-            {/* Temperatura */}
-            <p className="temperature">{weatherData.current.temp_c}°C</p>
+            <div className="weather-details">
+                <p className="rain-chance">
+                    Posibilidad de lluvia: {weatherData.forecast.forecastday[0].day.daily_chance_of_rain}%
+                </p>
+            </div>
         </div>
     );
 }

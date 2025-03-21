@@ -1,26 +1,48 @@
 .weather-info {
-    text-align: center;
     padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
 }
 
 .city-name {
+    font-family: 'Press Start 2P', cursive;
     font-size: 2rem;
-    font-weight: bold;
-    color: #333;
+    color: #ff6f61;
+    text-shadow: 
+        2px 2px 0 #ffcc00,
+        4px 4px 0 #ff6f61,
+        6px 6px 0 #00bcd4;
+    background: linear-gradient(45deg, #ff6f61, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    filter: brightness(1.2);
+}
+
+.temperature {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+    color: #ff6f61;
+    text-shadow: 
+        2px 2px 0 #ffcc00,
+        4px 4px 0 #ff6f61,
+        6px 6px 0 #00bcd4;
+    background: linear-gradient(45deg, #ff6f61, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    filter: brightness(1.2);
+    margin-bottom: 16px;
 }
 
 .rain-chance {
     font-size: 1.2rem;
-    color: #555;
-    margin-top: 10px;
-}
-
-.temperature {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #ff6f61;
-    margin-top: 20px;
+    color: #fff;
+    text-align: left; /* Alineamos a la izquierda */
+    margin: 0;
 }

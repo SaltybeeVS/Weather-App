@@ -1,0 +1,118 @@
+.DailyTitle {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    color: #ff6f61;
+    text-shadow: 
+        2px 2px 0 #ffcc00,
+        4px 4px 0 #ff6f61,
+        6px 6px 0 #00bcd4;
+    background: linear-gradient(45deg, #ff6f61, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    filter: brightness(1.2);
+    margin-bottom: 30px;
+}
+
+.hourly-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    height: 250px; /* Aumentado 20% */
+}
+
+.hour-card {
+    flex: 1;
+    min-width: 0;
+    margin: 0 0.5rem;
+    padding: 1.2rem;
+    position: relative;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-height: 170px;
+}
+
+
+.time {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    text-align: center;
+}
+
+.temp {
+    font-size: 1.8rem;
+    color: #e74c3c;
+    margin: 0.8rem 0;
+    font-weight: 800;
+}
+
+.rain {
+    color: #3498db;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.weather-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0.8rem 0;
+}
+
+@media (max-width: 768px) {
+    .hourly-container {
+        height: 192px;
+        padding: 0 0.5rem;
+    }
+    
+    .hour-card {
+        margin: 0 0.3rem;
+        padding: 1rem;
+        min-height: 150px;
+    }
+    
+    .temp {
+        font-size: 1.6rem;
+    }
+    
+    .weather-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hourly-container {
+        height: 180px;
+    }
+    
+    .hour-card {
+        padding: 0.8rem;
+        min-height: 130px;
+    }
+    
+    .time {
+        font-size: 1rem;
+    }
+    
+    .temp {
+        font-size: 1.4rem;
+    }
+    
+    .weather-icon {
+        width: 45px;
+        height: 45px;
+    }
+}

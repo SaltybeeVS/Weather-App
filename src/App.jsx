@@ -3,9 +3,12 @@ import SideBar from './Components/SideBar/SideBar';
 import WeeklyForecast from './Components/WeeklyForecast/WeeklyForecast';
 import WeatherInfo from './Components/WeatherInfo/WeatherInfo';
 import DailyForecast from './Components/DailyForecast/DailyForecast';
+import Background from './Components/Common/AnimatedBackground/Background';
 
 function App() {
     return (
+        <>
+        <Background/>
         <div className="grid grid-cols-[7rem_1fr_500px] grid-rows-[1fr_auto] h-screen min-w-[calc(7rem+500px+100px)] gap-x-4 gap-y-4">
             {/* Sidebar izquierdo - Ocupa ambas filas */}
             <div className="row-span-2 min-w-[7rem] pr-2">
@@ -27,6 +30,7 @@ function App() {
                 <WeeklyForecast location="São Paulo" />
             </div>
         </div>
+        </>
     );
 }
 

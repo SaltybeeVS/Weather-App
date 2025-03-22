@@ -1,4 +1,4 @@
-# WeatherSphere - Modern Weather Dashboard
+#  Modern Weather Dashboard
 
 Una aplicación meteorológica con pronósticos en tiempo real, fondos animados y componentes de interfaz intuitivos.
 

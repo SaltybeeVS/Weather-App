@@ -1,4 +1,4 @@
-# WeatherSphere - Painel Meteorológico Moderno
+# Painel Meteorológico Moderno
 
 Um aplicativo meteorológico rico em recursos com previsões em tempo real, fundos animados e componentes de interface intuitivos.
 

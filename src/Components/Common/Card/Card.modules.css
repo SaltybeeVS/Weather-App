@@ -1,9 +1,18 @@
-.Card{
-    backdrop-filter: blur(10px); 
-    background-color: rgba(255, 255, 255, 0.5); 
-    border: 1px solid rgba(255, 255, 255, 0.3); 
-    border-radius: 12px;
+.Card {
+    backdrop-filter: blur(10px) saturate(1.5); /* Más desenfoque y saturación para efecto cristalino */
+    background-color: rgba(30, 30, 30, 0.3);  /* Más oscuro para evitar el exceso de blanco */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borde más sutil pero visible */
+    border-radius: 16px;
     padding: 16px;
     margin: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 
+        0 6px 16px rgba(0, 0, 0, 0.2),
+        inset 0 0 10px rgba(255, 255, 255, 0.15); /* Sombra interna ligera */
+
+    /* Gradiente más notorio para dar profundidad */
+    background-image: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0.05),
+        rgba(255, 255, 255, 0.02)
+    );
 }

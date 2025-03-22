@@ -1,59 +1,3 @@
-.cyber-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  background: rgba(10, 4, 32, 0.8);
-  overflow: hidden;
-  backdrop-filter: blur(12px);
-}
-
-.cyber-grid {
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  background-image: 
-    linear-gradient(rgba(0, 255, 255, 0.2) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 255, 255, 0.2) 1px, transparent 1px);
-  background-size: 40px 40px;
-  animation: gridMove 15s linear infinite;
-  opacity: 0.8;
-}
-
-.cyber-particle {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(2px) drop-shadow(0 0 6px rgba(0, 255, 255, 0.8));
-  transition: transform 0.2s ease-out;
-  opacity: 0.9;
-}
-
-.cyber-energy-beam {
-  position: absolute;
-  width: 2px;
-  height: 100vh;
-  background: linear-gradient(transparent, cyan, transparent);
-  animation: energyFlow 2s infinite alternate;
-  opacity: 0.8;
-}
-
-.cyber-glitch {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background: repeating-linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0.1),
-    rgba(255, 255, 255, 0.1) 1px,
-    transparent 1px,
-    transparent 3px
-  );
-  animation: glitchEffect 0.2s infinite;
-  opacity: 0.6;
-}
-
 @keyframes gridMove {
   from { transform: translate(0, 0); }
   to { transform: translate(-40px, -40px); }
@@ -70,4 +14,12 @@
   50% { transform: translate(2px, -2px); }
   75% { transform: translate(-2px, -2px); }
   100% { transform: translate(2px, 2px); }
+}
+
+.animate-gridMove {
+  animation: gridMove 15s linear infinite;
+}
+
+.animate-glitchEffect {
+  animation: glitchEffect 0.2s infinite;
 }

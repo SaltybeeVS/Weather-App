@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { getForecast } from "../../Services/api";
 import Card from "../Common/Card/Card";
 import './WeeklyForecast.modules.css';
-import { FaTemperatureHigh } from "react-icons/fa";
 
 function WeeklyForecast({ location }) {
     const [forecast, setForecast] = useState(null);
@@ -12,7 +11,13 @@ function WeeklyForecast({ location }) {
     useEffect(() => {
         const fetchForecast = async () => {
             try {
-                const data = await getForecast(location);
+                let query = 'São Paulo';
+                if (location) {
+                    query = location.lat && location.lon 
+                        ? `${location.lat},${location.lon}`
+                        : typeof location === 'string' ? location : location.name;
+                }
+                const data = await getForecast(query);
                 setForecast(data.forecast.forecastday);
                 setLoading(false);
             } catch (err) {

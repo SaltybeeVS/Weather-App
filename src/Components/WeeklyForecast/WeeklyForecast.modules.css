@@ -1,0 +1,89 @@
+.forecast {
+    width: 500px;
+    height: calc(100vh - 32px);
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow-y: none;
+
+}
+
+.forecast h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    color: #ff6f61;
+    text-shadow: 
+        2px 2px 0 #ffcc00,
+        4px 4px 0 #ff6f61,
+        6px 6px 0 #00bcd4;
+    background: linear-gradient(45deg, #ff6f61, #ffcc00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    filter: brightness(1.2);
+    margin-bottom: 16px;
+}
+
+.forecast ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.forecast li {
+    height: calc(100vh / 8);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0 20px;
+}
+
+.forecast-day {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 20px;
+}
+
+.day-name {
+    color: #E0E0E0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    min-width: 120px;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.weather-condition {
+    flex: 1;
+    max-width: 60px;
+    margin-right: 20px;
+}
+
+.temperatures {
+    display: flex;
+    gap: 10px;
+    min-width: 140px;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.max-temp {
+    color: #FF073A;
+}
+
+.min-temp {
+    color: #00FFFF;
+}
+
+.weather-icon {
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+    margin-left: 20px;
+    flex-shrink: 0;
+}
+
+/* Estilos específicos para el icono de error */
+.forecast li .ErrorIcon {
+    width: 70px !important;
+}
